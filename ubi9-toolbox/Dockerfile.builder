@@ -2,8 +2,8 @@ FROM registry.access.redhat.com/ubi9/toolbox:latest
 
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
 
-# Install Java 21, curl, unzip, tar, gzip for Gradle and Docker CLI
-RUN dnf -y install java-21-openjdk curl unzip tar gzip && \
+# Install Java 21, Maven, curl, unzip, tar, gzip for Gradle and Docker CLI
+RUN dnf -y install java-21-openjdk maven curl unzip tar gzip && \
     dnf clean all
 
 # Install Docker CLI (static)
